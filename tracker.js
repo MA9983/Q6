@@ -1,4 +1,4 @@
-// Q6/tracker.js
+// tracker.js
 
 function getTimestamp() {
   return new Date().toISOString();
@@ -6,19 +6,24 @@ function getTimestamp() {
 
 function logEvent(eventType, element) {
   const tag = element.tagName.toLowerCase();
-  let objectType = tag;
+  const details = element.innerText || element.alt || '';
 
-  if (tag === 'img') objectType = 'image';
-  else if (tag === 'button') objectType = 'button';
-  else if (tag === 'a') objectType = 'link';
-  else if (element.type) objectType = element.type;
-
+  // Log to console (required by assignment)
   console.log({
     timestamp: getTimestamp(),
     type_of_event: eventType,
-    event_object: objectType,
-    details: element.outerText?.trim() || element.alt || ''
+    event_object: tag,
+    details: details
   });
+
+  // ---- Print on the browser page ----
+  const logContainer = document.getElementById('logOutput');
+  if (logContainer) {
+    const entry = document.createElement('div');
+    entry.style.padding = '4px 0';
+    entry.textContent = `${getTimestamp()} | ${eventType} | ${tag} | ${details}`;
+    logContainer.prepend(entry);
+  }
 }
 
 // Log page view
