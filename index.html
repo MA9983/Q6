@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q6 – Event Tracker Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    Q6 – Event Tracker Demo Page
+  </header>
+
+  <main>
+    <h1>Event Tracking Test</h1>
+    <p>Open the browser <strong>Console</strong> to see all <em>view</em> and <em>click</em> events being logged.</p>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button id="demoBtn1">Click Me</button>
+      <button id="demoBtn2">Another Button</button>
+      <br>
+      <a href="#">Demo Link</a>
+      <img src="https://via.placeholder.com/200" alt="Demo Image">
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> SSD Assignment – Q6
+  </footer>
+
+  <script>
+    // set footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="tracker.js"></script>
+</body>
+</html>
