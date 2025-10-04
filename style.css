@@ -1,55 +1,38 @@
-/* Q6/style.css */
-
-:root {
-  --bg: #f5f7fa;
-  --text: #1f2937;
-  --card: #ffffff;
-  --accent: #2563eb;
-  --border: #e5e7eb;
-  --shadow: 0 6px 18px rgba(0,0,0,.08);
-}
-
+/* Basic page styling */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
   line-height: 1.6;
 }
 
 header {
-  background: var(--accent);
+  background: #2563eb;
   color: white;
   padding: 1rem;
   text-align: center;
-  font-size: 1.5rem;
-  box-shadow: var(--shadow);
 }
 
 main {
   max-width: 800px;
   margin: 2rem auto;
-  background: var(--card);
+  background: white;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-h1, h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 button, a {
   display: inline-block;
-  background: var(--accent);
+  background: #2563eb;
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
-  text-decoration: none;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
+  text-decoration: none;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -61,15 +44,25 @@ button:hover, a:hover {
 img {
   display: block;
   margin: 1rem auto;
-  max-width: 200px;
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
+/* Event log box */
+#logOutput {
   margin-top: 2rem;
-  color: #555;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+  font-family: monospace;
   font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+#logOutput strong {
+  display: block;
+  margin-bottom: 0.5rem;
 }

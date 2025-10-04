@@ -8,7 +8,7 @@ function logEvent(eventType, element) {
   const tag = element.tagName.toLowerCase();
   const details = element.innerText || element.alt || '';
 
-  // Log to console (required by assignment)
+  // Log to console (as required)
   console.log({
     timestamp: getTimestamp(),
     type_of_event: eventType,
@@ -16,22 +16,21 @@ function logEvent(eventType, element) {
     details: details
   });
 
-  // ---- Print on the browser page ----
+  // Also display logs on the page
   const logContainer = document.getElementById('logOutput');
   if (logContainer) {
     const entry = document.createElement('div');
-    entry.style.padding = '4px 0';
     entry.textContent = `${getTimestamp()} | ${eventType} | ${tag} | ${details}`;
     logContainer.prepend(entry);
   }
 }
 
-// Log page view
+// Log page view when loaded
 window.addEventListener('DOMContentLoaded', () => {
   logEvent('view', document.body);
 });
 
-// Log clicks
+// Log all clicks on page
 document.addEventListener('click', (e) => {
   logEvent('click', e.target);
 });

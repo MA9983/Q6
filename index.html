@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Q6 – Event Tracker Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    Q6 – Event Tracker Demo Page
+    <h1>Q6 – Event Tracker Demo</h1>
+    <p>Tracks page views and clicks (visible on page & console)</p>
   </header>
 
   <main>
-    <h1>Event Tracking Test</h1>
-    <p>Open the browser <strong>Console</strong> to see all <em>view</em> and <em>click</em> events being logged.</p>
+    <h2>Try Interacting:</h2>
+    <p>Click buttons, links, or image below and see logs appear.</p>
 
-    <div style="text-align: center; margin-top: 2rem;">
-      <button id="demoBtn1">Click Me</button>
-      <button id="demoBtn2">Another Button</button>
-      <br>
+    <div class="test-area">
+      <button>Click Me</button>
+      <button>Another Button</button>
+      <br><br>
       <a href="#">Demo Link</a>
-      <img src="https://via.placeholder.com/200" alt="Demo Image">
+      <br><br>
+      <img src="https://via.placeholder.com/200"
+           alt="Demo Image"
+           width="200"
+           height="200">
     </div>
-    <div id="logOutput"
-     style="background:#f9f9f9;
-            padding:10px;
-            margin-top:20px;
-            border-radius:8px;
-            max-height:200px;
-            overflow-y:auto;
-            font-family:monospace;
-            font-size:14px;">
-  <strong>Event Logs:</strong>
-</div>
+
+    <!-- Log output box -->
+    <div id="logOutput">
+      <strong>Event Logs:</strong>
+    </div>
   </main>
 
   <footer>
@@ -41,7 +40,7 @@
   </footer>
 
   <script>
-    // set footer year
+    // show current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script src="tracker.js"></script>
